@@ -15,7 +15,7 @@ def main():
     solana_tokens = get_solana_token_profiles()
     print(f"📌 تعداد توکن‌های سولانا: {len(solana_tokens)}")
 
-    for token in solana_tokens[:5]:
+    for token in solana_tokens[:21]:
         message = format_token_info(token)
         result = send_telegram_message(BOT_TOKEN, CHAT_ID, message)
         print("ارسال پیام:", result)

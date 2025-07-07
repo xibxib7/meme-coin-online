@@ -10,7 +10,7 @@ def get_solana_token_profiles():
         response.raise_for_status()  # اگر HTTP error بود، exception می‌ده
         data = response.json()
     except Exception as e:
-        print("❌ خطا در دریافت یا پردازش JSON:", e)
+        print("❌ JSON Error:", e)
         return []  # برگردوندن لیست خالی به‌جای None
 
     solana_tokens = [token for token in data if token.get("chainId") == "solana"]
